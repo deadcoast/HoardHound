@@ -1,0 +1,29 @@
+[package]
+name = "hoardhound"
+version = "0.1.0"
+edition = "2021"
+description = "A targeted Windows CLI for finding forgotten games, launchers, app data, mods, caches, and user-owned storage hogs."
+license = "MIT OR Apache-2.0"
+repository = "https://example.invalid/hoardhound"
+readme = "README.md"
+keywords = ["windows", "disk", "storage", "cli", "games"]
+categories = ["command-line-utilities", "filesystem"]
+rust-version = "1.76"
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", features = ["clock", "serde"] }
+clap = { version = "4.6.1", features = ["derive", "env", "wrap_help"] }
+colored = "2.1"
+rayon = "1.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[dev-dependencies]
+tempfile = "3.10"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"

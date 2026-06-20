@@ -1,0 +1,483 @@
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 
+❯ rustup default stable
+info: using existing install for 'stable-x86_64-pc-windows-msvc'
+info: default toolchain set to 'stable-x86_64-pc-windows-msvc'
+
+  stable-x86_64-pc-windows-msvc unchanged - rustc 1.90.0 (1159e78c4 2025-09-14)
+
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 
+❯ cargo fmt                                                                                   
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 
+❯ cargo test
+   Compiling windows-link v0.2.1
+   Compiling anstyle v1.0.14
+   Compiling utf8parse v0.2.2
+   Compiling once_cell_polyfill v1.70.2
+   Compiling colorchoice v1.0.5
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling crossbeam-utils v0.8.21
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling serde_core v1.0.228
+   Compiling cfg-if v1.0.4
+   Compiling clap_lex v1.1.0
+   Compiling strsim v0.11.1
+   Compiling num-traits v0.2.19
+   Compiling zmij v1.0.21
+   Compiling lazy_static v1.5.0
+   Compiling memchr v2.8.2
+   Compiling windows-sys v0.61.2                                                                                                                                                                                                                                           
+   Compiling anstyle-parse v1.0.0                                                                                                                                                                                                                                          
+   Compiling either v1.16.0                                                                                                                                                                                                                                                
+   Compiling once_cell v1.21.4                                                                                                                                                                                                                                             
+   Compiling windows-targets v0.52.6                                                                                                                                                                                                                                       
+   Compiling getrandom v0.4.3                                                                                                                                                                                                                                              
+   Compiling itoa v1.0.18                                                                                                                                                                                                                                                  
+   Compiling fastrand v2.4.1                                                                                                                                                                                                                                               
+   Compiling anyhow v1.0.102                                                                                                                                                                                                                                               
+   Compiling windows-sys v0.59.0                                                                                                                                                                                                                                           
+   Compiling crossbeam-epoch v0.9.18                                                                                                                                                                                                                                       
+   Compiling crossbeam-deque v0.8.6                                                                                                                                                                                                                                        
+   Compiling rayon-core v1.13.0                                                                                                                                                                                                                                            
+   Compiling colored v2.2.0                                                                                                                                                                                                                                                
+   Compiling rayon v1.12.0                                                                                                                                                                                                                                                 
+   Compiling anstyle-query v1.1.5                                                                                                                                                                                                                                          
+   Compiling anstyle-wincon v3.0.11
+   Compiling terminal_size v0.4.4
+   Compiling tempfile v3.27.0
+   Compiling anstream v1.0.0                                                                                                                                                                                                                                               
+   Compiling clap_builder v4.6.0                                                                                                                                                                                                                                           
+   Compiling serde v1.0.228                                                                                                                                                                                                                                                
+   Compiling serde_json v1.0.150
+   Compiling chrono v0.4.45                                                                                                                                                                                                                                                
+   Compiling clap v4.6.1                                                                                                                                                                                                                                                   
+   Compiling hoardhound v0.1.0 (C:\Users\ryanf\github\space-hunter)                                                                                                                                                                                                        
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.75s                                                                                                                                                                                                   
+     Running unittests src\main.rs (target\debug\deps\hoardhound-1b43f18893852a2a.exe)
+
+running 2 tests
+test human::tests::parses_common_sizes ... ok
+test vdf::tests::parses_modern_libraryfolders ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 took 5s 
+❯ cargo build --release
+   Compiling proc-macro2 v1.0.106
+   Compiling quote v1.0.45
+   Compiling unicode-ident v1.0.24
+   Compiling windows-link v0.2.1
+   Compiling crossbeam-utils v0.8.21
+   Compiling serde_core v1.0.228
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling once_cell_polyfill v1.70.2
+   Compiling autocfg v1.5.1
+   Compiling anstyle v1.0.14
+   Compiling utf8parse v0.2.2
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling serde v1.0.228
+   Compiling zmij v1.0.21
+   Compiling rayon-core v1.13.0
+   Compiling colorchoice v1.0.5
+   Compiling windows-sys v0.61.2                                                                                                                                                                                                                                           
+   Compiling serde_json v1.0.150                                                                                                                                                                                                                                           
+   Compiling heck v0.5.0                                                                                                                                                                                                                                                   
+   Compiling anstyle-parse v1.0.0                                                                                                                                                                                                                                          
+   Compiling clap_lex v1.1.0                                                                                                                                                                                                                                               
+   Compiling strsim v0.11.1                                                                                                                                                                                                                                                
+   Compiling anyhow v1.0.102
+   Compiling either v1.16.0                                                                                                                                                                                                                                                
+   Compiling memchr v2.8.2                                                                                                                                                                                                                                                 
+   Compiling lazy_static v1.5.0                                                                                                                                                                                                                                            
+   Compiling num-traits v0.2.19                                                                                                                                                                                                                                            
+   Compiling itoa v1.0.18                                                                                                                                                                                                                                                  
+   Compiling anstyle-query v1.1.5                                                                                                                                                                                                                                          
+   Compiling anstyle-wincon v3.0.11
+   Compiling terminal_size v0.4.4
+   Compiling windows-targets v0.52.6                                                                                                                                                                                                                                       
+   Compiling windows-sys v0.59.0                                                                                                                                                                                                                                           
+   Compiling anstream v1.0.0                                                                                                                                                                                                                                               
+   Compiling crossbeam-epoch v0.9.18                                                                                                                                                                                                                                       
+   Compiling clap_builder v4.6.0                                                                                                                                                                                                                                           
+   Compiling syn v2.0.118                                                                                                                                                                                                                                                  
+   Compiling crossbeam-deque v0.8.6                                                                                                                                                                                                                                        
+   Compiling colored v2.2.0                                                                                                                                                                                                                                                
+   Compiling rayon v1.12.0                                                                                                                                                                                                                                                 
+   Compiling serde_derive v1.0.228                                                                                                                                                                                                                                         
+   Compiling clap_derive v4.6.1
+   Compiling clap v4.6.1                                                                                                                                                                                                                                                   
+   Compiling chrono v0.4.45                                                                                                                                                                                                                                                
+   Compiling hoardhound v0.1.0 (C:\Users\ryanf\github\space-hunter)                                                                                                                                                                                                        
+    Finished `release` profile [optimized] target(s) in 20.71s                                                                                                                                                                                                             
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 took 20s 
+❯ .\target\release\hoardhound.exe --help 
+HoardHound is a targeted Windows storage scanner. It focuses on user-owned files, game libraries, launchers, AppData bloat, mods, media, downloads, and forgotten installs instead of blindly crawling Windows system directories.
+
+Usage: hoardhound.exe [OPTIONS] <COMMAND>
+
+Commands:
+  scan     Scan targeted user-space locations and report the largest actionable folders
+  roots    Show which roots HoardHound would scan for a profile
+  open     Open a result from the last scan in File Explorer
+  explain  Explain the scanner safety model and category heuristics
+  help     Print this message or the help of the given subcommand(s)
+
+Options:
+      --no-color
+          Disable ANSI color in terminal output
+
+      --quiet
+          Print less decorative output
+
+  -h, --help
+          Print help (see a summary with '-h')
+
+  -V, --version
+          Print version
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 
+❯ .\target\release\hoardhound.exe roots --profile default
+Targeted scan roots
+1   Games              C:\XboxGames
+    Known Xbox app PC game install root.
+2   Games              C:\Program Files\Epic Games
+    Known Epic Games install root.
+3   Games              C:\Program Files (x86)\Diablo IV
+    Common Battle.net game install folder.
+4   Games              C:\Program Files (x86)\Epic Games
+    Known Epic Games install root.
+5   Games              C:\Program Files (x86)\Overwatch
+    Common Battle.net game install folder.
+6   Games              C:\Program Files (x86)\World of Warcraft
+    Common Battle.net game install folder.
+7   Personal           C:\Users\ryanf\Desktop
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+8   Documents          C:\Users\ryanf\Documents
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+9   Downloads          C:\Users\ryanf\Downloads
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+10  Media              C:\Users\ryanf\Music
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+11  Media              C:\Users\ryanf\Pictures
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+12  Games              C:\Users\ryanf\Saved Games
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+13  Media              C:\Users\ryanf\Videos
+    Visible user-owned folder commonly used by games, media tools, launchers, and installers.
+14  Games              C:\Program Files (x86)\Steam\steamapps\common
+    Steam library common folder; each child is usually an installed game.
+15  AppData            C:\Users\ryanf\AppData\Local
+    Per-user application data. Targeted because launchers, Electron apps, shader caches, game configs, and forgotten user-installed apps often live here.
+16  AppData            C:\Users\ryanf\AppData\LocalLow
+    Per-user low-integrity app/game data; Unity games and browser/plugin-era apps commonly store data here.
+17  AppData            C:\Users\ryanf\AppData\Roaming
+    Per-user application data. Targeted because launchers, Electron apps, shader caches, game configs, and forgotten user-installed apps often live here.
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 
+❯ .\target\release\hoardhound.exe scan --profile games --top 50 --min-size 500MB
+Scanning 12 targeted roots with minimum report size 500.0 MB...
+HoardHound targeted storage report
+Profile: games | Roots: 12 | Scanned: 703.9 GB | Files: 62041 | Dirs: 7645 | Time: 5.33s
+
+──────────────────────────────────────────────────────────────────────────────────────────────
+ID          SIZE  CATEGORY    CONF   FOLDER
+──────────────────────────────────────────────────────────────────────────────────────────────
+1       159.3 GB  Games        95%   FINAL FANTASY VII REBIRTH
+      C:\Program Files (x86)\Steam\steamapps\common\FINAL FANTASY VII REBIRTH
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: End (159.1 GB), Engine (243.4 MB)
+
+2       148.0 GB  Games        95%   Koikatsu Party
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: mods (118.2 GB), abdata (18.3 GB), UserData (9.9 GB), Koikatsu Party_Data (384.5 MB)
+
+3       118.4 GB  Games        95%   Space Marine 2
+      C:\Program Files (x86)\Steam\steamapps\common\Space Marine 2
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: client_pc (118.3 GB), server_pc (44.5 MB), EasyAntiCheat (1.8 MB)
+
+4       118.2 GB  Games        95%   mods
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\mods
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: Sideloader …ack - Studio (54.9 GB), Sideloader …leeding Edge (26.3 GB), Sideloader Modpack (26.3 GB), Sideloader …dpack - Maps (7.5 GB)
+
+5       104.6 GB  Games        70%   Epic Games
+      C:\Program Files\Epic Games
+      why: inherits category from targeted scan root; root: Known Epic Games install root.
+      do: Review through the owning launcher/app when possible.
+      top children: Fortnite (104.6 GB)
+
+6        71.9 GB  Games        70%   Overwatch
+      C:\Program Files (x86)\Overwatch
+      why: inherits category from targeted scan root; root: Common Battle.net game install folder.
+      do: Review through the owning launcher/app when possible.
+      top children: data (71.2 GB), _retail_ (625.5 MB), .battle.net (4.3 MB)
+
+7        54.9 GB  Games        95%   Sideloader Modpack - Studio
+      C:\Program Files (x86)\Steam\steamapps\comm…katsu Party\mods\Sideloader Modpack - Studio
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: Conquestus (15.0 GB), Ticklefist (5.5 GB), ConQ (3.1 GB), titan36 (2.2 GB)
+
+8        34.6 GB  Games        95%   PRAGMATA
+      C:\Program Files (x86)\Steam\steamapps\common\PRAGMATA
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: dlc (285.0 MB), D3D12 (4.5 MB)
+
+9        34.2 GB  Games        95%   SamabakeScramble
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: abdata (33.5 GB), BepInEx (316.0 MB), sardines (152.2 MB), UserData (96.7 MB)
+
+10       26.3 GB  Games        95%   Sideloader Modpack - Bleeding Edge
+      C:\Program Files (x86)\Steam\steamapps\comm…arty\mods\Sideloader Modpack - Bleeding Edge
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: CCCCP (26.3 GB), BepInEx (5.6 KB)
+
+11       26.3 GB  Games        95%   Sideloader Modpack
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\mods\Sideloader Modpack
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: Evaan (1.4 GB), Creamstar (940.6 MB), MrDelegado (842.8 MB), GaryuX (806.7 MB)
+
+12       23.3 GB  Games        95%   chara
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\chara
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: MOD (17.9 GB), tt39 (1.6 GB), Gyobobo (795.9 MB), body (78.0 MB)
+
+13       21.0 GB  Games        95%   !TestQueue
+      C:\Program Files (x86)\Steam\steamapps\comm…der Modpack - Bleeding Edge\CCCCP\!TestQueue
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: Both (10.7 GB), KK (5.9 GB), Malformed Manifest (4.0 GB), KKS (469.5 MB)
+
+14       18.3 GB  Games        95%   abdata
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\abdata
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: sound (7.9 GB), map (3.9 GB), chara (2.2 GB), h (1.5 GB)
+
+15       17.9 GB  Games        95%   MOD
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\chara\MOD
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: TekitoMOD (12.6 GB), kkmod (3.0 GB), gkms (680.2 MB), shinycolors (414.8 MB)
+
+16       16.2 GB  Games        95%   Movie
+      C:\Program Files (x86)\Steam\steamapps\comm…\FINAL FANTASY VII REBIRTH\End\Content\Movie
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: 8800-FOREE (5.5 GB), 8600-COSME (3.1 GB), Platforms (2.0 GB), 8700-NIBLE (1.3 GB)
+
+17       15.0 GB  Games        95%   Conquestus
+      C:\Program Files (x86)\Steam\steamapps\comm…\mods\Sideloader Modpack - Studio\Conquestus
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+18       12.6 GB  Games        95%   TekitoMOD
+      C:\Program Files (x86)\Steam\steamapps\comm…\SamabakeScramble\abdata\chara\MOD\TekitoMOD
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: SVS_hairMOD (2.6 GB), SVS_MOD (2.2 GB), SVS_clothMOD (630.6 MB), Highlander_Twins (353.9 MB)
+
+19       11.5 GB  Games        95%   MIR4
+      C:\Program Files (x86)\Steam\steamapps\common\MIR4
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: MirMobile (11.5 GB), Engine (10.8 KB)
+
+20       10.7 GB  Games        95%   Both
+      C:\Program Files (x86)\Steam\steamapps\comm…odpack - Bleeding Edge\CCCCP\!TestQueue\Both
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+21        9.9 GB  Games        95%   UserData
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\UserData
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: studio (5.7 GB), chara (4.2 GB), save (2.7 MB), MakerCameraPresets (31.4 KB)
+
+22        7.9 GB  Games        95%   sound
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\abdata\sound
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: data (7.9 GB), setting (17.4 KB)
+
+23        7.5 GB  Games        95%   Sideloader Modpack - Maps
+      C:\Program Files (x86)\Steam\steamapps\comm…oikatsu Party\mods\Sideloader Modpack - Maps
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: DarkSoldier27 (5.2 GB), Ruine02 (538.8 MB), The Lucky Freeman (25.2 MB), Tsuna (10.5 MB)
+
+24        5.9 GB  Games        95%   KK
+      C:\Program Files (x86)\Steam\steamapps\comm… Modpack - Bleeding Edge\CCCCP\!TestQueue\KK
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+25        5.7 GB  Games        95%   studio
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\UserData\studio
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: scene (5.7 GB), pose (0 B)
+
+26        5.5 GB  Games        95%   8800-FOREE
+      C:\Program Files (x86)\Steam\steamapps\comm…ASY VII REBIRTH\End\Content\Movie\8800-FOREE
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: MV_FOREE_7640 (4.8 GB), MV_FOREE_7240 (342.4 MB), MV_FOREE_5500 (90.4 MB), MV_FOREE_0080 (84.8 MB)
+
+27        5.5 GB  Games        95%   Ticklefist
+      C:\Program Files (x86)\Steam\steamapps\comm…\mods\Sideloader Modpack - Studio\Ticklefist
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+28        5.4 GB  Games        95%   SteamVR
+      C:\Program Files (x86)\Steam\steamapps\common\SteamVR
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: tools (4.3 GB), bin (458.4 MB), resources (457.2 MB), drivers (197.5 MB)
+
+29        5.2 GB  Games        95%   DarkSoldier27
+      C:\Program Files (x86)\Steam\steamapps\comm…mods\Sideloader Modpack - Maps\DarkSoldier27
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+30        4.5 GB  Games        95%   h
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\h
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: animator (4.1 GB), particle (216.5 MB), scene (132.0 MB), item (85.3 MB)
+
+31        4.4 GB  Mods         93%   Vortex
+      C:\Users\ryanf\AppData\Roaming\Vortex
+      why: matched known mod-manager/mod profile naming; root: Known Nexus Vortex per-user data location.
+      do: Open the mod manager first; delete unused profiles/download caches there when available.
+      top children: mountandblade2bannerlord (2.3 GB), downloads (1.9 GB), Cache (173.6 MB), Code Cache (15.9 MB)
+
+32        4.3 GB  Games        95%   tools
+      C:\Program Files (x86)\Steam\steamapps\common\SteamVR\tools
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: steamvr_environments (3.6 GB), steamvr_tutorial (364.2 MB), steamvr_room_setup (151.5 MB), vrcalib (64.8 MB)
+
+33        4.2 GB  Games        95%   chara
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\UserData\chara
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: female (4.1 GB), male (65.5 MB)
+
+34        4.0 GB  Games        95%   Malformed Manifest
+      C:\Program Files (x86)\Steam\steamapps\comm…ing Edge\CCCCP\!TestQueue\Malformed Manifest
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+35        3.9 GB  Games        95%   map
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\abdata\map
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: scene (3.8 GB), object (16.6 MB), thumbnail (2.3 MB), waitpoint (665.9 KB)
+
+36        3.6 GB  Games        95%   steamvr_environments
+      C:\Program Files (x86)\Steam\steamapps\common\SteamVR\tools\steamvr_environments
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: game (3.6 GB), content (38.3 MB)
+
+37        3.1 GB  Games        95%   ConQ
+      C:\Program Files (x86)\Steam\steamapps\comm… Party\mods\Sideloader Modpack - Studio\ConQ
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+38        3.1 GB  Games        95%   8600-COSME
+      C:\Program Files (x86)\Steam\steamapps\comm…ASY VII REBIRTH\End\Content\Movie\8600-COSME
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: MV_COSME_5030 (719.3 MB), MV_COSME_0220 (684.7 MB), MV_COSME_5050 (449.2 MB), MV_COSME_5040 (445.4 MB)
+
+39        3.0 GB  Games        95%   kkmod
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\chara\MOD\kkmod
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: SVS (2.2 GB)
+
+40        2.6 GB  Games        95%   craft
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\craft
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: map (2.3 GB), anime (232.9 MB), item (138.4 MB), thumbnail (20.7 MB)
+
+41        2.6 GB  Games        95%   SVS_hairMOD
+      C:\Program Files (x86)\Steam\steamapps\comm…amble\abdata\chara\MOD\TekitoMOD\SVS_hairMOD
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+42        2.4 GB  Games        95%   Sideloader Modpack - Animations
+      C:\Program Files (x86)\Steam\steamapps\comm…u Party\mods\Sideloader Modpack - Animations
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: Katarsys (1.3 GB), AgiShark (723.3 MB), Omega (250.3 MB), [ΩMEGA] (80.2 MB)
+
+43        2.3 GB  Mods         93%   mountandblade2bannerlord
+      C:\Users\ryanf\AppData\Roaming\Vortex\mountandblade2bannerlord
+      why: matched known mod-manager/mod profile naming; root: Known Nexus Vortex per-user data location.
+      do: Open the mod manager first; delete unused profiles/download caches there when available.
+      top children: mods (2.3 GB), snapshots (6.0 KB), icons (1.8 KB), profiles (0 B)
+
+44        2.3 GB  Games        95%   steamtours
+      C:\Program Files (x86)\Steam\steamapps\comm…R\tools\steamvr_environments\game\steamtours
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: bin (27.7 MB), panorama (23.2 MB), tools (219.7 KB), cfg (143.3 KB)
+
+45        2.2 GB  Games        95%   SVS
+      C:\Program Files (x86)\Steam\steamapps\comm…\SamabakeScramble\abdata\chara\MOD\kkmod\SVS
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+46        2.2 GB  Games        95%   SVS_MOD
+      C:\Program Files (x86)\Steam\steamapps\comm…eScramble\abdata\chara\MOD\TekitoMOD\SVS_MOD
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+47        2.2 GB  Games        95%   titan36
+      C:\Program Files (x86)\Steam\steamapps\comm…rty\mods\Sideloader Modpack - Studio\titan36
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+
+48        2.2 GB  Games        95%   chara
+      C:\Program Files (x86)\Steam\steamapps\common\Koikatsu Party\abdata\chara
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: thumb (17.3 MB)
+
+49        2.1 GB  Games        95%   33Immortals
+      C:\Program Files (x86)\Steam\steamapps\common\33Immortals
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: 33Immortals_Data (2.0 GB), D3D12 (4.5 MB)
+
+50        2.1 GB  Games        95%   female
+      C:\Program Files (x86)\Steam\steamapps\common\SamabakeScramble\abdata\h\animator\female
+      why: matched a known game library/install path; root: Steam library common folder; each child is usually an installed game.
+      do: Review through the relevant launcher first when possible; uninstalling from the launcher is safer than manual deletion.
+      top children: 000_01 (2.0 GB), 023_01 (19.5 MB)
+
+──────────────────────────────────────────────────────────────────────────────────────────────
+Open a result: hoardhound open <ID>
+Skipped dirs: 12 | Access errors: 0
+
+~\github\space-hunter is 📦 v0.1.0 via 🦀 v1.90.0 took 5s 
+❯ 
