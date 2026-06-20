@@ -16,7 +16,7 @@
 
 ## v0.2 - compile hardening on Windows
 
-- [ ] Run `cargo fmt`, `cargo clippy`, and `cargo test` on Windows.
+- [x] Run `cargo fmt`, `cargo clippy`, and `cargo test` on Windows.
 - [ ] Fix path/ANSI issues specific to Windows Terminal, PowerShell, and legacy consoles.
 - [ ] Add integration tests with synthetic Windows-like directory trees.
 - [ ] Add `--threads` and per-drive scan scheduling.
