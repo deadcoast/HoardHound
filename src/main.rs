@@ -1,19 +1,8 @@
-mod classify;
-mod cli;
-mod config;
-mod filters;
-mod human;
-mod model;
-mod report;
-mod roots;
-mod scanner;
-mod vdf;
-mod windows;
-
 use anyhow::{Context, Result};
 use clap::Parser;
-use cli::{Cli, Commands};
-use config::ScanConfig;
+use hoardhound::cli::{Cli, Commands};
+use hoardhound::config::ScanConfig;
+use hoardhound::{human, model, report, roots, scanner, windows};
 use std::fs;
 
 fn main() {
@@ -26,6 +15,7 @@ fn main() {
 fn run() -> Result<()> {
     let cli = Cli::parse();
     let color = !cli.no_color;
+    let output_style = report::OutputStyle::from_flags(color, cli.plain);
 
     match cli.command {
         Commands::Scan(args) => {
@@ -57,7 +47,7 @@ fn run() -> Result<()> {
             let last_report = windows::last_report_path()?;
             report::write_json(&report, &last_report)?;
 
-            report::print_report(&report, color, args.show_skipped);
+            report::print_report(&report, output_style, args.show_skipped);
 
             if let Some(path) = args.json {
                 report::write_json(&report, &path)?;
@@ -74,7 +64,7 @@ fn run() -> Result<()> {
                 ScanConfig::conservative_default(profile, 30, human::parse_size("1GB")?);
             config.include_program_files = args.include_program_files;
             let roots = roots::discover_roots(&config)?;
-            report::print_roots(&roots, color);
+            report::print_roots(&roots, output_style);
         }
         Commands::Open(args) => {
             let path = windows::last_report_path()?;

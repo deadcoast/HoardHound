@@ -5,9 +5,36 @@ use colored::{Color, Colorize};
 use std::fs;
 use std::path::Path;
 
-pub fn print_report(report: &ScanReport, color: bool, show_skipped: bool) {
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct OutputStyle {
+    color: bool,
+    plain: bool,
+}
+
+impl OutputStyle {
+    pub fn from_flags(color: bool, plain: bool) -> Self {
+        Self {
+            color: color && !plain,
+            plain,
+        }
+    }
+
+    fn color_enabled(self) -> bool {
+        self.color
+    }
+
+    fn rule(self, width: usize) -> String {
+        if self.plain {
+            "-".repeat(width)
+        } else {
+            "─".repeat(width)
+        }
+    }
+}
+
+pub fn print_report(report: &ScanReport, style: OutputStyle, show_skipped: bool) {
     let title = "HoardHound";
-    if color {
+    if style.color_enabled() {
         println!(
             "{} {}",
             title.bold().bright_blue(),
@@ -35,18 +62,18 @@ pub fn print_report(report: &ScanReport, color: bool, show_skipped: bool) {
         return;
     }
 
-    println!("\n{}", rule(94));
+    println!("\n{}", style.rule(94));
     println!(
-        "{:<4} {:>11}  {:<11} {:<5}  {}",
-        "ID", "SIZE", "CATEGORY", "CONF", "FOLDER"
+        "{:<4} {:>11}  {:<11} {:<5}  FOLDER",
+        "ID", "SIZE", "CATEGORY", "CONF"
     );
-    println!("{}", rule(94));
+    println!("{}", style.rule(94));
 
     for entry in &report.entries {
-        print_entry(entry, color);
+        print_entry(entry, style);
     }
 
-    println!("{}", rule(94));
+    println!("{}", style.rule(94));
     println!("Open a result: hoardhound open <ID>");
 
     if show_skipped || report.stats.access_errors > 0 || report.stats.skipped_dirs > 0 {
@@ -64,13 +91,13 @@ pub fn print_report(report: &ScanReport, color: bool, show_skipped: bool) {
     }
 }
 
-fn print_entry(entry: &ResultEntry, color: bool) {
+fn print_entry(entry: &ResultEntry, style: OutputStyle) {
     let size = format_size(entry.size_bytes);
     let category = entry.category.label();
     let name = truncate_middle(&entry.display_name, 44);
     let path = truncate_middle(&entry.path.display().to_string(), 88);
 
-    if color {
+    if style.color_enabled() {
         println!(
             "{:<4} {:>11}  {:<11} {:>3}%   {}",
             entry.id.to_string().bright_blue(),
@@ -124,17 +151,13 @@ fn color_category(label: &str) -> colored::ColoredString {
     label.color(color)
 }
 
-fn rule(width: usize) -> String {
-    "─".repeat(width)
-}
-
-pub fn print_roots(roots: &[ScanRoot], color: bool) {
+pub fn print_roots(roots: &[ScanRoot], style: OutputStyle) {
     if roots.is_empty() {
         println!("No matching scan roots exist on this machine for the selected profile.");
         return;
     }
 
-    if color {
+    if style.color_enabled() {
         println!("{}", "Targeted scan roots".bold().bright_blue());
     } else {
         println!("Targeted scan roots");
@@ -222,4 +245,25 @@ pub fn print_explain(verbose: bool) {
 
 fn escape_md(input: &str) -> String {
     input.replace('|', "\\|")
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn plain_style_uses_ascii_rules_and_disables_color() {
+        let style = OutputStyle::from_flags(true, true);
+
+        assert!(!style.color_enabled());
+        assert_eq!(style.rule(6), "------");
+    }
+
+    #[test]
+    fn decorated_style_keeps_unicode_rules() {
+        let style = OutputStyle::from_flags(true, false);
+
+        assert!(style.color_enabled());
+        assert_eq!(style.rule(6), "──────");
+    }
 }

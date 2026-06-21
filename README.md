@@ -32,6 +32,9 @@ hoardhound scan --profile appdata --min-size 500MB
 # Preview scan roots before scanning
 hoardhound roots --profile default
 
+# Use ASCII-only terminal output for legacy consoles or logs
+hoardhound --plain scan
+
 # Export a shareable report
 hoardhound scan --json report.json --markdown report.md
 

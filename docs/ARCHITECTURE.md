@@ -6,6 +6,8 @@ HoardHound is not a WinDirStat clone. It is a targeted discovery tool for reclai
 
 ## Main modules
 
+- `lib.rs`: reusable library boundary for integration tests and the CLI binary.
+- `main.rs`: thin binary entry point that parses CLI arguments and dispatches commands.
 - `cli.rs`: clap command surface.
 - `roots.rs`: targeted root discovery for user folders, AppData, launchers, game libraries, mod managers, and manifest-derived install locations.
 - `scanner.rs`: read-only recursive size aggregation, candidate selection, ranking, and report generation.

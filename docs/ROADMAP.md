@@ -18,9 +18,9 @@
 
 - [x] Run `cargo fmt`, `cargo clippy`, and `cargo test` on Windows.
 - [ ] Fix path/ANSI issues specific to Windows Terminal, PowerShell, and legacy consoles.
-- [ ] Add integration tests with synthetic Windows-like directory trees.
+- [x] Add integration tests with synthetic Windows-like directory trees.
 - [ ] Add `--threads` and per-drive scan scheduling.
-- [ ] Add `--plain`/ASCII output mode separate from `--no-color`.
+- [x] Add `--plain`/ASCII output mode separate from `--no-color`.
 - [ ] Include signed release builds through GitHub Actions.
 
 ## v0.3 - launcher intelligence

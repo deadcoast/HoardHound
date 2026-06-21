@@ -18,6 +18,10 @@ pub struct Cli {
     #[arg(long, global = true)]
     pub no_color: bool,
 
+    /// Use ASCII-only terminal output and disable ANSI color.
+    #[arg(long, global = true)]
+    pub plain: bool,
+
     /// Print less decorative output.
     #[arg(long, global = true)]
     pub quiet: bool,
@@ -132,5 +136,18 @@ impl From<CliProfile> for ScanProfile {
             CliProfile::FullUser => ScanProfile::FullUser,
             CliProfile::Paranoid => ScanProfile::Paranoid,
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn parses_plain_as_global_output_flag() {
+        let cli = Cli::try_parse_from(["hoardhound", "--plain", "roots"]).unwrap();
+
+        assert!(cli.plain);
+        assert!(!cli.no_color);
     }
 }

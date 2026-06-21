@@ -21,11 +21,7 @@ pub fn format_size(bytes: u64) -> String {
 }
 
 pub fn parse_size(input: &str) -> Result<u64> {
-    let s = input
-        .trim()
-        .to_ascii_lowercase()
-        .replace('_', "")
-        .replace(' ', "");
+    let s = input.trim().to_ascii_lowercase().replace(['_', ' '], "");
     if s.is_empty() {
         bail!("size cannot be empty");
     }
